@@ -8,7 +8,7 @@ while True:
         break
 
     try:
-        num = float(num)
+        num = int(num)
     except:
         print('Invalid input')
         continue
@@ -23,4 +23,5 @@ while True:
     elif num > max:
         max = num
 
-print(min,max)
+print('Maximum is',max)
+print('Minimum is',min)

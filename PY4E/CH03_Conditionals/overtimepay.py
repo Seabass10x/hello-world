@@ -1,8 +1,10 @@
 # Exercise 3.1
-hours = input('Enter Hours: ')
+hrs = input('Enter Hours: ')
+h = float(hrs)
 rate = input('Enter Rate: ')
-if float(hours) <= 40:
-    pay = float(hours) * float(rate)
+r = float(rate)
+if h <= 40:
+    pay = h * r
 else:
-    pay = (40 * float(rate)) + ((float(hours) - 40) * (float(rate) * 1.5))
+    pay = (40 * r) + ((h - 40) * (r * 1.5))
 print('Pay:', round(pay, 2))

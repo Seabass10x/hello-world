@@ -21,4 +21,4 @@ except:
     quit()
 
 pay = computepay(hours,rate)
-print('Pay:', round(pay, 2))
+print(round(pay, 2))

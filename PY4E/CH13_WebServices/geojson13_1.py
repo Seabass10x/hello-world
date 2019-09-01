@@ -2,9 +2,9 @@ import urllib.request, urllib.parse, urllib.error
 import json
 import ssl
 
-api_key = True
+api_key = False
 # If you have a Google Places API key, enter it here
-api_key = 'AIzaSyD2d7BZLoYlyIFuQToJYpmujZb0DMqztng'
+#api_key = 'AIzaS...'
 # https://developers.google.com/maps/documentation/geocoding/intro
 
 if api_key is False:
