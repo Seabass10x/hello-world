@@ -19,7 +19,7 @@ print('Retrieved', len(data), 'characters')
 tree = ET.fromstring(data)
 
 comments = tree.findall('comments/comment')
-print('Count: ', len(comments))
+print('Count:', len(comments))
 
 sum = 0
 for block in comments:
@@ -27,4 +27,4 @@ for block in comments:
     intcnt = int(comcnt)
     sum = sum + intcnt
 
-print('Sum: ', sum)
+print('Sum:', sum)
