@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <!-- https://getbootstrap.com/docs/4.3/content/tables/ -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">TXN</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+                {% if transaction["TXN"] == "BUY" %}
+                    <tr class="table-success">
+                {% else %}
+                    <tr class="table-danger">
+                {% endif %}
+                        <td>{{ transaction["timestamp"] }}</td>
+                        <td>{{ transaction["TXN"] }}</td>
+                        <td>{{ transaction["symbol"] }}</td>
+                        <td>{{ transaction["shares"] }}</td>
+                        <td>{{ transaction["amount"] }}</td>
+                    </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
